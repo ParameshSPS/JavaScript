@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juice Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Varela+Round&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/520f955916.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Header Section Start -->
+
+    <header>
+        <div class="logo">
+            <img src="Data/logo.svg" alt="">
+        </div>
+
+        <div class="menu" onclick="navToggle()">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Order</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Header Section End -->
+
+    <!-- Home Section Start -->
+
+    <div class="home">
+        <div class="content">
+            <h1>Put some juice in your life</h1>
+            <h3>Cool your mind with orange juices</h3>
+
+            <div class="buttons">
+                <a href="#"><button><i class="fas fa-shopping-cart"> Order</i></button></a>
+                <a href="#"><button>Add to cart</button></a>
+            </div>
+
+            <div class="play-btn" onclick="vidToggle()"><i class="fas fa-play-circle"></i> Watch video</div>
+        </div>
+
+        <div class="image">
+            <img src="Data/img.svg" alt="">
+        </div>
+    </div>
+
+    <!-- Home Section End -->
+
+    <!-- Video Section Start -->
+
+    <div class="video-container">
+        <i class="fas fa-times" id="close-btn" onclick="vidToggle()"></i>
+        <video src="Data/video.mp4" controls></video>
+    </div>
+
+    <!-- Video Section End -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

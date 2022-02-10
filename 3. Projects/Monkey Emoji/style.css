@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.quote {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    height: 20vh;
+    width: 100vw;
+    margin-top: -30%;
+    text-align: center;
+    justify-content: center;
+    color: red;
+}
+
+.emoji {
+    font-size: 20rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.closed {
+    display: none;
+}
+
+.open {
+    display: none;
+}
+
+.speak {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.color {
+    margin-top: 20px;
+    color: blue;
+}

@@ -1,0 +1,339 @@
+:root {
+    --org: #F49800;
+    --black: #455A64;
+}
+
+* {
+    font-family: 'Kaushan Script', cursive;    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-style: italic;
+    transition: all 0.2s linear;
+}
+
+html {
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    width: 8%;
+    height: 8%;
+    margin-left: 17rem;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.menu {
+    font-size: 5rem;
+    color: purple;
+    z-index: 4;
+    cursor: pointer;
+    display: none;
+}
+
+.menu:hover {
+    color: var(--org);
+    cursor: pointer;
+}
+
+nav {
+    width: 40rem; 
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-around;
+}
+
+li a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    float: right;
+    padding-bottom: 2rem;
+}
+
+li a:hover {
+    color: var(--org);
+}
+
+/********************************** Home *****************************************/
+
+.home {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.content {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 5rem;
+}
+
+.content h1 {
+    font-family: 'Kaushan Script', sans-serif;
+    font-size: 4rem;
+    color: var(--black);
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.content h3 {
+    font-size: 1.8rem;
+    margin: 2rem 0;
+    color: var(--org);
+}
+
+.buttons {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+a button {
+    height: 4rem;
+    width: 16rem;
+    outline: none;
+    border: none;
+    border-radius: 5rem;
+    margin-top: 1rem;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+a button:hover {
+    opacity: 6;
+}
+
+a:nth-child(1) button {
+    background: var(--org);
+}
+
+a:nth-child(1) button:hover {
+    background: purple;
+}
+
+a:nth-child(2) button {
+    background: var(--black);
+}
+
+a:nth-child(2) button:hover {
+    background: purple;
+}
+
+.play-btn {
+    font-size: 2rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.play-btn i {
+    color: var(--org);
+}
+
+.image {
+    background: var(--black);
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding-top: 10rem;
+}
+
+.image img {
+    width: 50vw;
+}
+
+
+/********************************** Video *****************************************/
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    opacity: 0; 
+    visibility: hidden;
+}
+
+video {
+    max-width: 90vw;
+    max-height: 40rem;
+    border: 2rem solid var(--black);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#close-btn {
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    cursor: pointer;
+    color: var(--black);
+    font-size: 2rem;
+}
+
+.toggleVid {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/************************** Screens ************************************/
+
+@media (max-width: 1220px) {
+    html {
+        font-size: 55%;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .content h1 {
+        font-size: 6rem;
+        text-align: center;
+        margin-top: 0;
+    }
+    
+    .content h3 {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .buttons {
+        margin: 5rem 0;
+        text-align: center;
+    }
+
+    a button {
+        height: 6rem;
+        width: 20rem;
+    }
+
+    .play-btn {
+        font-size: 3rem;
+        margin-bottom: 0;
+    }
+
+    nav {
+        width: 50rem;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+    li a {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 35%;
+    }
+
+    .menu {
+        display: block;
+        padding-top: 1px;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -200%;
+        width: 100vw;
+        height: 100vh;
+        background: white;
+        z-index: 2;
+    }
+
+    ul {
+        flex-flow: column;
+        justify-content: center;
+        height: 100%;
+    }
+
+    li {
+        margin: 3rem 0;
+    }
+
+    li a {
+        color: var(--black);
+        font-size: 5rem;
+    }
+
+    .toggle {
+        right: 0%;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 60%;
+    }
+
+    .content {
+        padding-top: 8rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .menu {
+        font-size: 3rem;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 360px) {
+    html {
+        font-size: 40%;
+    }
+
+    li a {
+        font-size: 4rem;
+    }
+
+}
