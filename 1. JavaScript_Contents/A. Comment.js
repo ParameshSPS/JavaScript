@@ -4,9 +4,11 @@ let b = 10;
 
 console.log('adding');
 
-console.log(a + b); //15 Single line comment
+console.log(a + b); 
+// 15 Single line comment
 
-//xample
+
+// Example
 
 let x = 'Kiran Kumar';
 
